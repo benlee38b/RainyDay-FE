@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import * as api from '../utils/api'
 
 export class DetailInputList extends Component {
   state = {
@@ -11,8 +12,8 @@ export class DetailInputList extends Component {
   render() {
     return (
       <form className="detail-input-form" onSubmit={this.handleSubmit}>
-        <input type='text' onKeyUp={this.handleKeyUp} id="city-input"></input>
-        <input type='text' onKeyUp={this.handleKeyUp} id="email-input"></input>
+        <input type='text' onChange={this.handleKeyUp} id="city-input" value={this.state.details.city} placeholder="City"></input>
+        <input type='email' onChange={this.handleKeyUp} id="email-input" value={this.state.details.email} placeholder="Email"></input>
         <button type="submit" onClick={this.handleSubmit} className="addItemButton">
           Subscribe
         </button>
@@ -37,7 +38,21 @@ export class DetailInputList extends Component {
 
   }
 
-  handleSubmit = (event) => {
+  handleSubmit = async (event) => {
+    event.preventDefault()
+    const {city, email} = this.state.details
+
+    let data = await api.postDetails(city, email)
+    console.log(data)
+    this.setState({
+      details: {
+        city: '',
+        email: ''
+      }
+    }, () => {
+      console.log(this.state.details)
+    })
+
 
   }
 }

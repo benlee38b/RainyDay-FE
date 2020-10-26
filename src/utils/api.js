@@ -6,7 +6,8 @@ const request = axios.create({
 })
 
 
-exports.postDetails = async (city, email) => {
+export const postDetails = async (city, email) => {
+  console.log(city, email)
   return await request.post('/subscribe', {
     city, email
   })
