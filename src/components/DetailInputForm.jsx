@@ -15,7 +15,7 @@ export class DetailInputList extends Component {
   render() {
     return (
       <form className="detail-input-form" onSubmit={this.handleSubmit}>
-       
+          <h3>Enter your email address and city for email notifications on rainy days</h3>
          <TextField  label="City" variant="filled" onChange={this.handleKeyUp} id="city-input" value={this.state.details.city} placeholder="e.g. London"/>
          <TextField  label="Email" variant="filled" onChange={this.handleKeyUp} id="email-input" value={this.state.details.email} placeholder="e.g. example@domain.com"/>
          <Button variant="contained" color="primary" component="span" onClick={this.handleSubmit} id="subscribe-button">
