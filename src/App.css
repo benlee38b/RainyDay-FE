@@ -56,7 +56,7 @@ html:before {
 }
 
 .App-header {
-  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-family: 'Permanent Marker', cursive;
   margin: 0px auto;
   display: flex;
   z-index: 10;
@@ -68,6 +68,7 @@ html:before {
 }
 h3 {
   background-color: #9fb0cc;
+  font-family: 'Permanent Marker', cursive;
   border-radius: 5%;
 }
 
@@ -85,11 +86,13 @@ h3 {
 
 #city-input,
 #email-input {
+  font-family: 'Permanent Marker', cursive;
   width: 300px;
   padding: 25px;
 }
 #subscribe-button {
   height: 50px;
+  font-family: 'Permanent Marker', cursive;
   width: 275px;
   margin: 15px 50px;
 }
