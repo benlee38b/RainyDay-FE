@@ -12,3 +12,22 @@
   font-size: calc(10px + 2vmin);
   color: black;
 }
+
+.detail-input-form {
+  display: flex;
+  flex-flow: column;
+  margin: auto;
+  width: fit-content;
+  align-items: center;
+}
+
+#city-input,
+#email-input {
+  width: 300px;
+  padding: 25px;
+}
+#subscribe-button {
+  height: 50px;
+  width: 275px;
+  margin: 25px 50px;
+}

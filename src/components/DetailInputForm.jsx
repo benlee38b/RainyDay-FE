@@ -1,5 +1,8 @@
 import React, { Component } from 'react'
 import * as api from '../utils/api'
+import TextField from '@material-ui/core/TextField';
+import Button from '@material-ui/core/Button';
+
 
 export class DetailInputList extends Component {
   state = {
@@ -12,11 +15,13 @@ export class DetailInputList extends Component {
   render() {
     return (
       <form className="detail-input-form" onSubmit={this.handleSubmit}>
-        <input type='text' onChange={this.handleKeyUp} id="city-input" value={this.state.details.city} placeholder="City"></input>
-        <input type='email' onChange={this.handleKeyUp} id="email-input" value={this.state.details.email} placeholder="Email"></input>
-        <button type="submit" onClick={this.handleSubmit} className="addItemButton">
+       
+         <TextField  label="City" variant="filled" onChange={this.handleKeyUp} id="city-input" value={this.state.details.city} placeholder="e.g. London"/>
+         <TextField  label="Email" variant="filled" onChange={this.handleKeyUp} id="email-input" value={this.state.details.email} placeholder="e.g. example@domain.com"/>
+         <Button variant="contained" color="primary" component="span" onClick={this.handleSubmit} id="subscribe-button">
           Subscribe
-        </button>
+        </Button>
+        
         
       </form>
     )
