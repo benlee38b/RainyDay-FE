@@ -9,7 +9,7 @@ import ReactAnimatedWeather from 'react-animated-weather';
 const defaults = {
   icon: 'RAIN',
   color: '#5b677a',
-  size: '100vw',
+  size: '120vw',
   animate: true
 };
 
